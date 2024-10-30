@@ -44,7 +44,7 @@ public class SimModel {
 
 	public void start() throws CsvValidationException, IOException {
 		// TODO Auto-generated method stub
-		SimModel model=new SimModel(new Conf(20,1,3,100, 500));
+		SimModel model=new SimModel(this.conf);
 		CSVTools ut=new CSVTools("Instance2024_09_30.csv",this.conf);
 		this.hospital=ut.getHospital();
 		for (int i=0; i<hospital.size(); i++) {
