@@ -29,7 +29,6 @@ public class PatientAgent extends Agent implements Runnable {
 		this.newDay=xNewDay;
 		// TODO Auto-generated constructor stub
 		allocated = false;
-		conf=new Conf(100,1,3,100, 500);
 		this.closerHospital=rand.nextInt(conf.getNumberOfHospitals())+1 ;
 
 	}
@@ -52,7 +51,6 @@ public class PatientAgent extends Agent implements Runnable {
 		this.newDay=false;
 		this.allocated=false;
 		this.arrivalDay=this.departureDay=0;
-		conf=new Conf(20,1,3,100, 500);
 		this.ventilationSupport=false;
 		this.closerHospital=rand.nextInt(conf.getNumberOfHospitals())+1 ;
 	}

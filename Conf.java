@@ -4,16 +4,21 @@ public class Conf {
     private int numberOfHospitals; // by Default is just one hospital
     private int numberOfBeds;
     private int numberOfPatients;
+    private String instance;
+    private Boolean haveInstance;
 
 
 
-    public Conf(int xnumberOfDays, int xpolicyOfAssignment, int XnumberOfHospitals, int XnumberBeds, int XnumberOfPatients) {
+    public Conf(int xnumberOfDays, int xpolicyOfAssignment, int XnumberOfHospitals, int XnumberBeds, int XnumberOfPatients, String xInstance) {
         this.numberOfDays = xnumberOfDays;
         this.policyOfAssignment=xpolicyOfAssignment;
         this.numberOfHospitals=XnumberOfHospitals;
         this.numberOfBeds=XnumberBeds;
         this.numberOfPatients=XnumberOfPatients;
+        this.instance=xInstance;
+        this.haveInstance=containsInstance();
     }
+
 
     public void setNumberOfHospitals(int xNH){
         this.numberOfHospitals=xNH;
@@ -21,6 +26,10 @@ public class Conf {
 
     public int getNumberOfDays() {
         return this.numberOfDays;
+    }
+
+    public String getInstance(){
+        return this.instance;
     }
 
     public int getPolicyOfAssignment(){
@@ -32,5 +41,12 @@ public class Conf {
     public int getNumberOfBeds(){return this.numberOfBeds;  }
 
     public int getNumberOfPatients(){return this.numberOfPatients; }
+
+    public Boolean containsInstance(){
+        if (this.instance.isEmpty()){
+            return false;
+        }
+        return true;
+    }
 
 }

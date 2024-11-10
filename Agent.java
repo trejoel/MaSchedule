@@ -13,7 +13,8 @@ public abstract class Agent {
 		this.conf = xConf;
 		this.setId(id);
 		this.setTime(timeStep);
-		conf=new Conf(20,1,3,100, 500);
+		//conf=new Conf(20,1,3,100, 500|);
+		conf=xConf;
 
 	}
 

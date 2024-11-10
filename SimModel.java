@@ -27,11 +27,6 @@ public class SimModel {
 
 	}
 
-	
-	public SimModel getInstance() {
-		return this;
-	}
-
 
 
 
@@ -64,17 +59,18 @@ public class SimModel {
 
 
 
-	public void generate()  {
+	public void generate(Conf conf)  {
 		// TODO Auto-generated method stub
 		try {
-			FileWriter xFile = new FileWriter("Instance2024_09_30.csv");
+			//FileWriter xFile = new FileWriter("Test.csv");
+			FileWriter xFile = new FileWriter(conf.getInstance());
 			CSVWriter writer = new CSVWriter(xFile);
 			String[] header;
 			header= new String[]{"Type", "Id", "Day", "BedorPatientType", "CloserHospital", "LOS"};
 			writer.writeNext(header);
 			Random ran = new Random();
 			int newDay=0;
-			SimModel model=new SimModel(new Conf(20,1,3,100, 500));
+			SimModel model=new SimModel(conf);
 			Agent hospital =  new HospitalAgent(100,0, this.conf);
 			String[] row;
 			row=new String[]{String.valueOf(hospital.getType()),String.valueOf(hospital.getId()),String.valueOf(0),"NA",String.valueOf(hospital.getId()),String.valueOf(conf.getNumberOfDays())};
