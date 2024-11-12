@@ -62,8 +62,7 @@ public class SimModel {
 	public void generate(Conf conf)  {
 		// TODO Auto-generated method stub
 		try {
-			//FileWriter xFile = new FileWriter("Test.csv");
-			FileWriter xFile = new FileWriter(conf.getInstance());
+			FileWriter xFile = new FileWriter("Test.csv");
 			CSVWriter writer = new CSVWriter(xFile);
 			String[] header;
 			header= new String[]{"Type", "Id", "Day", "BedorPatientType", "CloserHospital", "LOS"};

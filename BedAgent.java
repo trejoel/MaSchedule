@@ -56,7 +56,7 @@ public class BedAgent extends Agent implements Runnable{
 		if (toDay>conf.getNumberOfDays()){
 			toDay=conf.getNumberOfDays();
 		}
-		System.out.println("fromDay:"+fromDay+"ToDay"+toDay);
+		//System.out.println("fromDay:"+fromDay+"ToDay"+toDay);
 		for (int i=fromDay; i<=toDay;i++){
 			if (!this.available[i]){
 				isAv=false;
@@ -102,7 +102,7 @@ public class BedAgent extends Agent implements Runnable{
 	@Override
 	public void act() {
 		// TODO Auto-generated method stub
-		System.out.println("Bed ID = "+getId()+" available at day "+this.getTime()+" at Hospital:"+this.hospitalOfAllocation+"\n");
+		//System.out.println("Bed ID = "+getId()+" available at day "+this.getTime()+" at Hospital:"+this.hospitalOfAllocation+"\n");
 	}
 
 }
