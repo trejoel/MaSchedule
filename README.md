@@ -10,7 +10,7 @@ We suggest to use the intelij framework to compile and execute. Before running t
 -commons-lang3-3.14.0-javadoc.jar
 -commons-lang3-3.14.0-sources.jar
 -commons-lang3-3.14.0-test-sources.jar
--commons-lang3-3.14.0-tests.jar3
+-commons-lang3-3.14.0-tests.jar
 
 Then, you can execute the code by running the main.java file. 
 
